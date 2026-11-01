@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio mahasiswa - profil, keahlian, proyek, dan kontak.">
+  <title>Personal Portfolio | Mahasiswa</title>
+  <style>
+    :root {
+      --bg: #0b1020; --panel: #121a30; --text: #eef2ff; --muted: #a8b3cc;
+      --accent: #8b7cff; --accent2: #45d6c5; --line: rgba(255,255,255,.12);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, ui-sans-serif, system-ui, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1080px, 90%); margin: auto; }
+    header { position: sticky; top: 0; z-index: 10; background: rgba(11,16,32,.88); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+    nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { font-weight: 800; letter-spacing: .5px; font-size: 1.1rem; }
+    .brand span { color: var(--accent2); }
+    .nav-links { display: flex; gap: 24px; color: var(--muted); font-size: .92rem; }
+    .nav-links a:hover { color: var(--accent2); }
+    .hero { padding: 100px 0 85px; display: grid; grid-template-columns: 1.4fr .8fr; align-items: center; gap: 50px; }
+    .eyebrow { color: var(--accent2); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: .78rem; }
+    h1 { font-size: clamp(2.5rem, 6vw, 4.6rem); line-height: 1.08; margin: 16px 0 20px; }
+    h1 span { color: var(--accent); }
+    .intro { color: var(--muted); max-width: 620px; font-size: 1.06rem; }
+    .actions { display: flex; gap: 14px; margin-top: 30px; flex-wrap: wrap; }
+    .btn { padding: 12px 20px; border-radius: 10px; font-weight: 700; display: inline-block; transition: .2s; }
+    .primary { background: var(--accent); color: white; }
+    .primary:hover { transform: translateY(-3px); filter: brightness(1.1); }
+    .secondary { border: 1px solid var(--line); color: var(--text); }
+    .secondary:hover { border-color: var(--accent2); }
+    .profile-card { background: linear-gradient(145deg, #1c2850, #121a30); border: 1px solid var(--line); border-radius: 24px; padding: 30px; text-align: center; box-shadow: 0 25px 70px rgba(0,0,0,.25); }
+    .avatar { width: 125px; height: 125px; margin: 0 auto 18px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(135deg, var(--accent), var(--accent2)); font-size: 2.5rem; font-weight: 900; color: #0b1020; }
+    .profile-card p { color: var(--muted); font-size: .92rem; }
+    section { padding: 65px 0; }
+    .section-title { font-size: 2rem; margin-bottom: 10px; }
+    .section-sub { color: var(--muted); margin-bottom: 28px; }
+    .about { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+    .panel, .project, .skill { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+    .panel p { color: var(--muted); }
+    .skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .skill h3 { margin-bottom: 7px; }
+    .skill p { color: var(--muted); font-size: .92rem; }
+    .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .project .tag { display: inline-block; color: var(--accent2); font-size: .78rem; font-weight: 700; margin-bottom: 12px; }
+    .project p { color: var(--muted); margin-top: 8px; }
+    .contact { background: linear-gradient(120deg, rgba(139,124,255,.16), rgba(69,214,197,.10)); border: 1px solid var(--line); border-radius: 20px; padding: 32px; }
+    .contact p { color: var(--muted); margin: 8px 0 20px; }
+    footer { border-top: 1px solid var(--line); padding: 25px 0; color: var(--muted); text-align: center; font-size: .88rem; }
+    @media (max-width: 720px) {
+      .hero, .about { grid-template-columns: 1fr; }
+      .hero { padding-top: 65px; }
+      .profile-card { max-width: 360px; }
+      .skills { grid-template-columns: 1fr; }
+      .projects { grid-template-columns: 1fr; }
+      .nav-links { gap: 12px; font-size: .8rem; }
+    }
+    @media (max-width: 420px) { nav { align-items: flex-start; flex-direction: column; padding: 14px 0; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a class="brand" href="#home">MY<span>PORTFOLIO.</span></a>
+      <div class="nav-links">
+        <a href="#about">Tentang</a><a href="#skills">Keahlian</a><a href="#projects">Proyek</a><a href="#contact">Kontak</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container hero" id="home">
+      <div>
+        <p class="eyebrow">Personal Portfolio</p>
+        <h1>Halo, saya <span>Mahasiswa</span>.</h1>
+        <p class="intro">Saya sedang mengembangkan kemampuan di bidang teknologi informasi, analisis sistem, dan pengembangan web. Selamat datang di website portfolio saya.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">Lihat Proyek</a>
+          <a class="btn secondary" href="#contact">Hubungi Saya</a>
+        </div>
+      </div>
+      <div class="profile-card">
+        <div class="avatar">M</div>
+        <h2>Nama Mahasiswa</h2>
+        <p>Mahasiswa Sistem Informasi</p>
+        <p style="margin-top:12px">Belajar · Berkarya · Berkembang</p>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">Tentang Saya</h2>
+        <p class="section-sub">Perkenalan singkat dan tujuan pengembangan diri.</p>
+        <div class="about">
+          <div class="panel"><h3>Profil</h3><p>Saya merupakan mahasiswa yang tertarik mempelajari bagaimana teknologi dapat membantu menyelesaikan permasalahan dan meningkatkan efektivitas proses bisnis.</p></div>
+          <div class="panel"><h3>Tujuan</h3><p>Melalui portfolio ini, saya ingin mendokumentasikan proses belajar, menampilkan hasil proyek, serta terus meningkatkan kemampuan di bidang teknologi informasi.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title">Keahlian</h2>
+        <p class="section-sub">Beberapa bidang yang sedang saya pelajari.</p>
+        <div class="skills">
+          <div class="skill"><h3>Analisis Sistem</h3><p>Memahami kebutuhan pengguna dan proses bisnis.</p></div>
+          <div class="skill"><h3>Web Development</h3><p>Membangun halaman web menggunakan HTML, CSS, dan JavaScript.</p></div>
+          <div class="skill"><h3>Dokumentasi</h3><p>Menyusun dokumentasi proyek dan mencatat hasil diskusi.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Proyek Pilihan</h2>
+        <p class="section-sub">Contoh proyek yang dapat diganti dengan hasil pekerjaan pribadi.</p>
+        <div class="projects">
+          <article class="project"><span class="tag">PROJECT 01</span><h3>Sistem Informasi</h3><p>Perancangan sistem untuk membantu pengelolaan informasi dan kebutuhan pengguna.</p></article>
+          <article class="project"><span class="tag">PROJECT 02</span><h3>Website Portfolio</h3><p>Website statis responsif yang dipublikasikan menggunakan layanan cloud Vercel.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact">
+          <h2 class="section-title">Mari Terhubung</h2>
+          <p>Anda dapat mengganti alamat email di bawah ini dengan alamat email aktif.</p>
+          <a class="btn primary" href="mailto:emailkamu@example.com">Kirim Email</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container">© <span id="year"></span> Personal Portfolio. Dibuat untuk praktikum Cloud Computing.</div></footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
